@@ -12,6 +12,9 @@ planet_list = [
     {
         "planet_name": "Mercury",
         "planet_sub": "Swift Planet",
+        "distance": "67.419 million km",
+        "radius": "2439.7 km",
+        "year": "88 days",
         "planet_ico": "https://cdn-icons.flaticon.com/png/512/3049/premium/3049528.png?token=exp=1647009253~hmac=88bbee89a38640d0fdb94f762dc9cd47",
         "planet_imgs": [
             "https://cdn.pixabay.com/photo/2013/07/18/10/57/mercury-163610_1280.jpg",
@@ -19,11 +22,14 @@ planet_list = [
             "https://cdn.pixabay.com/photo/2015/06/26/18/48/mercury-822825_1280.png",
             "https://www.nasa.gov/sites/default/files/thumbnails/image/pia03101-mariner-10-mercury.png"
         ],
-        "planet_info":"Zipping around the sun in only 88 days, Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury experiences dramatic changes in its day and night temperatures: Day temperatures can reach a scorching 840  F (450 C), which is hot enough to melt lead. Meanwhile on the night side, temperatures drop to minus 290 F (minus 180 C)."
+        "planet_info": "Zipping around the sun in only 88 days, Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury experiences dramatic changes in its day and night temperatures: Day temperatures can reach a scorching 840  F (450 C), which is hot enough to melt lead. Meanwhile on the night side, temperatures drop to minus 290 F (minus 180 C)."
     },
     {
         "planet_name": "Venus",
         "planet_sub": "Evening Star",
+        "distance": "108.04 million km",
+        "radius": "6051.8 km",
+        "year": "225 days",
         "planet_ico": "https://cdn-icons-png.flaticon.com/512/3049/3049518.png",
         "planet_imgs": [
             'https://cdn.pixabay.com/photo/2011/12/13/14/39/venus-11022_1280.jpg',
@@ -36,6 +42,9 @@ planet_list = [
     {
         "planet_name": "Earth",
         "planet_sub": "Blue Planet",
+        "distance": "148.62 milion km",
+        "radius": "6371 km",
+        "year": "365 days",
         "planet_ico": "https://cdn-icons.flaticon.com/png/512/3049/premium/3049615.png?token=exp=1647009496~hmac=75f7d740ea6369a86316818144d3d177",
         "planet_imgs": [
             'https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015_1280.jpg',
@@ -48,6 +57,9 @@ planet_list = [
     {
         "planet_name": "The Moon",
         "planet_sub": "Earth's best friend",
+        "distance": "152.5 million km",
+        "radius": "1737.4 km",
+        "year": "27 days",
         "planet_ico": "https://cdn-icons-png.flaticon.com/512/3049/3049507.png",
         "planet_imgs": [
             'https://starwalk.space/gallery/images/mars-the-ultimate-guide/1920x1080.jpg',
@@ -60,6 +72,9 @@ planet_list = [
     {
         "planet_name": "Mars",
         "planet_sub": "Red Planet",
+        "distance": "217.87 million km",
+        "radius": "3389.5 km",
+        "year": "687 days",
         "planet_ico": "https://cdn-icons-png.flaticon.com/512/3049/3049512.png",
         "planet_imgs": [
             'https://starwalk.space/gallery/images/mars-the-ultimate-guide/1920x1080.jpg',
@@ -72,6 +87,9 @@ planet_list = [
     {
         "planet_name": "Jupiter",
         "planet_sub": "Gas Giant",
+        "distance": "745.18 million km",
+        "radius": "69 911 km",
+        "year": "12 years",
         "planet_ico": "https://cdn-icons.flaticon.com/png/512/3049/premium/3049521.png?token=exp=1647009771~hmac=47468b80997c9da721179dd1b5ee8f55",
         "planet_imgs": [
             'https://cdn.mos.cms.futurecdn.net/yyonzpUYYkQNX8corCxeyD.jpeg',
@@ -84,6 +102,9 @@ planet_list = [
     {
         "planet_name": "Saturn",
         "planet_sub": "Ringed Planet",
+        "distance": "1.433 billion km",
+        "radius": "58232 km",
+        "year": "29 years",
         "planet_ico": "https://cdn-icons.flaticon.com/png/512/3049/premium/3049534.png?token=exp=1647010168~hmac=0dd30202371594a60ede7d1994f6ef43",
         "planet_imgs": [
             'https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg',
@@ -96,6 +117,9 @@ planet_list = [
     {
         "planet_name": "Uranus",
         "planet_sub": "Bulls-eye Planet",
+        "distance": "3.2 billion km",
+        "radius": "25362 km",
+        "year": "84 years",
         "planet_ico": "https://cdn-icons.flaticon.com/png/512/3049/premium/3049553.png?token=exp=1647010646~hmac=1dbf240c467267b3ba0c186ee8382467",
         "planet_imgs": [
             'https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_scale,w_1920/v1/media/gmg/2SCUFD6Q4FEDXKP2LIYOWIWVHM.jpg?_a=ATABlAA0',
@@ -107,6 +131,9 @@ planet_list = [
     {
         "planet_name": "Neptune",
         "planet_sub": "The 8th Planet",
+        "distance": "4.5 billion km",
+        "radius": "24622 km",
+        "year": "165 years",
         "planet_ico": "https://cdn-icons.flaticon.com/png/512/3049/premium/3049544.png?token=exp=1647011225~hmac=0d89d974af0c0c41b824f833b3223d65",
         "planet_imgs": [
             'https://d.newsweek.com/en/full/1988281/neptune.jpg',
