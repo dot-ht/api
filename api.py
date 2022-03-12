@@ -77,7 +77,7 @@ def api_chat(inp):
                     "suggestions" : suggestions
                 }
     print(inp)
-    return json.dumps(response)
+    return response
 
 class Day(Resource):
     def get(self):
@@ -113,8 +113,7 @@ class Chat(Resource):
         
     def post(self):
         try:
-            chat_res = json.loads(api_chat(request.json['input']))
-            return chat_res, 200
+            return api_chat(request.json['input']), 200
         except:
             return "", 400
         
