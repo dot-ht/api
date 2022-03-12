@@ -1,5 +1,5 @@
 import re
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_restful import Resource, abort, Api
 import pymongo
 import requests
@@ -101,7 +101,7 @@ class Planets(Resource):
         except:
             return "", 400
         
-        return return_json, 200
+        return jsonify(return_json), 200
 
 class Chat(Resource):
     def get(self):
@@ -109,11 +109,12 @@ class Chat(Resource):
             mongo_query = bot_col.find_one({},{"_id": 0 })
         except:
             return "", 400 
-        return mongo_query, 200  
+        return jsonify(mongo_query), 200  
         
     def post(self):
         try:
-            return api_chat(request.json['input']), 200
+            chat_res = json.loads(api_chat(request.json['input']))
+            return jsonify(chat_res), 200
         except:
             return "", 400
         
