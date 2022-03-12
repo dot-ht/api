@@ -4,7 +4,9 @@ import pymongo
 import requests
 import os
 import json
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
 api = Api(app)
 
@@ -27,13 +29,13 @@ class Day(Resource):
         del return_api_json['media_type']
         del return_api_json['url']
         
-        #return nasa api json json
+        #return nasa api json
         return return_api_json
 
 class Planets(Resource):
     def get(self):
         try:
-            mongo_query = planet_col.find()
+            mongo_query = planet_col.find({},{ "_id": 0 })
             return_json = []
             for i in mongo_query:
                 return_json.append(i)
@@ -49,3 +51,6 @@ class Chat(Resource):
 api.add_resource(Day, '/day/')
 api.add_resource(Planets, '/planets/')
 api.add_resource(Chat, '/chat/')
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0")
