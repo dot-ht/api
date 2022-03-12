@@ -5,9 +5,11 @@ import requests
 import os
 import json
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
+cors = CORS(app, resources={r"*": {"origins": "*"}})
 api = Api(app)
 
 MONGO_CONNECTION = os.getenv('MONGO_CONNECTION')
@@ -17,6 +19,7 @@ APOD = os.getenv('APOD')
 myclient = pymongo.MongoClient(MONGO_CONNECTION)
 mydb = myclient['planet_db']
 planet_col = mydb['planet_collection']
+bot_col = mydb['bot_collection']
 
 nasa_api = requests.get(APOD + API_KEY)
 
@@ -40,13 +43,21 @@ class Planets(Resource):
             for i in mongo_query:
                 return_json.append(i)
         except:
-            return {'planets': None}, 400
+            return "", 400
         
-        return {'planets': return_json}, 200
+        return return_json, 200
 
 class Chat(Resource):
     def get(self):
-        return {}
+        if not request.json:
+            try:
+                mongo_query = bot_col.find_one({},{"_id": 0 })
+            except:
+                return "", 400 
+            return mongo_query, 200
+        else:
+            content = json.dumps(request.json)   
+        
 
 api.add_resource(Day, '/day/')
 api.add_resource(Planets, '/planets/')
