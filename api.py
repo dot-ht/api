@@ -112,7 +112,6 @@ class Chat(Resource):
         return mongo_query, 200  
         
     def post(self):
-        print(request.json)
         try:
             return api_chat(request.json['input']), 200
         except:
